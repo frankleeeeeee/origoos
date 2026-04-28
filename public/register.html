@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册 - Origo</title>
+    <link rel="stylesheet" href="/_assets/styles.css" />
+    <script src="/_assets/app.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <h2 class="brand">序原 ORIGO</h2>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <span id="nav-auth-slot"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="container form-wrap">
+        <div class="card">
+            <h2>注册</h2>
+            <form onsubmit="register(event)">
+                <input id="username" placeholder="用户名（至少3位）" minlength="3" required />
+                <input id="password" type="password" placeholder="密码（至少6位）" minlength="6" required />
+                <input id="password_confirm" type="password" placeholder="再次输入密码" minlength="6" required />
+                <div class="captcha-row">
+                    <input id="captcha_input" placeholder="输入验证码" required />
+                    <button type="button" class="secondary captcha-refresh" onclick="refreshRegisterCaptcha()">刷新验证码</button>
+                </div>
+                <div class="captcha-code-wrap">
+                    <span class="captcha-label">验证码：</span>
+                    <span id="register-captcha-code" class="captcha-code">----</span>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+            <p class="muted">已有账号？<a href="/login">去登录</a></p>
+        </div>
+    </div>
+</body>
+</html>

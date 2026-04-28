@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#27880;&#20876; - Origo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <h2 class="brand">&#24207;&#21407; ORIGO</h2>
+            <div class="nav-links">
+                <a href="/">&#39318;&#39029;</a>
+                <span id="nav-auth-slot"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="container form-wrap">
+        <div class="card">
+            <h2>&#27880;&#20876;</h2>
+            <form onsubmit="register(event)">
+                <input id="username" placeholder="&#29992;&#25143;&#21517;&#65288;&#33267;&#23569;3&#20301;&#65289;" minlength="3" required />
+                <input id="password" type="password" placeholder="&#23494;&#30721;&#65288;&#33267;&#23569;6&#20301;&#65289;" minlength="6" required />
+                <input id="password_confirm" type="password" placeholder="&#20877;&#27425;&#36755;&#20837;&#23494;&#30721;" minlength="6" required />
+                <div class="captcha-row">
+                    <input id="captcha_input" placeholder="&#36755;&#20837;&#39564;&#35777;&#30721;" required />
+                    <button type="button" class="secondary captcha-refresh" onclick="refreshRegisterCaptcha()">&#21047;&#26032;&#39564;&#35777;&#30721;</button>
+                </div>
+                <div class="captcha-code-wrap">
+                    <span class="captcha-label">&#39564;&#35777;&#30721;&#65306;</span>
+                    <span id="register-captcha-code" class="captcha-code">----</span>
+                </div>
+                <button type="submit">&#27880;&#20876;</button>
+            </form>
+            <p class="muted">&#24050;&#26377;&#36134;&#21495;&#65311;<a href="/login">&#21435;&#30331;&#24405;</a></p>
+        </div>
+    </div>
+</body>
+</html>

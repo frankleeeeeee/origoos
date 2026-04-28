@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>价格 - Origo</title>
+    <link rel="stylesheet" href="/_assets/styles.css" />
+    <script src="/_assets/app.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <h2 class="brand">序原 ORIGO</h2>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="/dashboard">用户中心</a>
+                <span id="nav-auth-slot"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="container form-wrap">
+        <div class="card">
+            <h2>会员方案</h2>
+            <p>9.9 元 / 年（体验版）</p>
+            <p class="muted">提交后将调用支付回调接口，模拟会员升级流程。</p>
+            <button onclick="submitPaymentCallback()">提交支付回调</button>
+            <button class="secondary" onclick="location.href='/dashboard'">返回用户中心</button>
+        </div>
+    </div>
+</body>
+</html>

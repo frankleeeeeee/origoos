@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origo OS - 文件夹直接变PPT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+</head>
+<body id="page-top" class="landing">
+    <nav class="site-nav">
+        <div class="container nav-simple">
+            <h2 class="brand">Origo</h2>
+            <div class="nav-links" id="nav-auth-slot"></div>
+        </div>
+    </nav>
+
+    <section class="hero hero-focus">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="hero-kicker">文件夹 → PPT</p>
+                <h1>把一整个文件夹<br />直接变成汇报PPT</h1>
+                <p class="hero-sub">自动整理资料 → 生成结构 → 输出PPT</p>
+                <div class="hero-actions">
+                    <button id="hero-online-btn" class="btn btn-primary" type="button">🚀 在线体验（快速生成）</button>
+                    <a class="btn btn-secondary" href="#" id="desktop-download-link">⬇️ 下载桌面版（完整功能）</a>
+                </div>
+                <p class="hero-tip">支持本地文件 / 批量处理（完整功能需桌面端）</p>
+            </div>
+
+            <div class="card demo-video-card">
+                <h3>文件夹 → PPT 演示</h3>
+                <div class="video-mock" id="demo-video-mock">
+                    <div class="video-step active">① 拖入文件夹</div>
+                    <div class="video-step">② 自动分析</div>
+                    <div class="video-step">③ 生成PPT</div>
+                    <div class="video-step">④ 展示结果</div>
+                </div>
+                <p class="muted">在线版直接连接服务端生成，桌面版支持更完整流程。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="online-demo" class="online-demo">
+        <div class="container">
+            <h2 class="section-title">立即体验（在线版）</h2>
+            <p class="section-sub">先试在线版流程，完整文件夹处理建议下载桌面版。</p>
+
+            <div class="grid-2">
+                <article class="card demo-entry-card">
+                    <h3>① 上传体验（推荐）</h3>
+                    <p class="muted">📂 上传你的资料（≤10MB）</p>
+                    <div class="upload-row">
+                        <input id="demo-file" type="file" accept=".txt,.md,.json,.log" />
+                        <button id="demo-upload-run" class="btn btn-primary" type="button">选择文件并演示</button>
+                    </div>
+                    <p class="muted">⚠️ 在线版仅上传单文件，完整批处理建议桌面版。当前支持文件类型：</p>
+                    <div class="support-tags" aria-label="在线版支持文件类型">
+                        <span class="support-tag">txt</span>
+                        <span class="support-tag">md</span>
+                        <span class="support-tag">json</span>
+                        <span class="support-tag">log</span>
+                    </div>
+                </article>
+
+                <article class="card demo-entry-card">
+                    <h3>② 快速体验（备用）</h3>
+                    <p class="muted">⚡ 一句话生成PPT</p>
+                    <input id="demo-input" class="ai-input" placeholder="AI产品融资方案" />
+                    <button id="demo-start" class="btn btn-primary" type="button">生成</button>
+                </article>
+            </div>
+
+            <article class="card process-card">
+                <div class="process-head">
+                    <h3>演示进度</h3>
+                    <span class="demo-badge">当前为在线版本（服务端实时生成）</span>
+                </div>
+                <ul id="demo-progress-list" class="progress-list">
+                    <li>等待开始...</li>
+                </ul>
+                <div id="demo-result" class="demo-result hidden"></div>
+                <div class="demo-actions">
+                    <button id="demo-retry" class="btn btn-secondary hidden" type="button">重新生成</button>
+                    <a id="demo-download" class="btn btn-primary hidden" href="#">下载</a>
+                    <a id="demo-edit" class="btn btn-secondary hidden" href="/dashboard">继续编辑</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="trust-note">
+        <div class="container card trust-card">
+            <h3>✨ 想处理完整文件夹？</h3>
+            <p>桌面版支持本地批量处理、长流程与完整导出能力。</p>
+            <a class="btn btn-primary" href="#" id="desktop-download-cta">⬇️ 下载桌面版（无限制处理）</a>
+        </div>
+    </section>
+
+    <section id="scenes">
+        <div class="container">
+            <h2 class="section-title">常见办公场景，一句话就能完成</h2>
+            <p class="section-sub">不再学习复杂工具，不再在多个软件来回切换。</p>
+            <div class="grid-3">
+                <article class="card scene-card">
+                    <h3>文件整理</h3>
+                    <p>告诉 Origo：按日期整理文件</p>
+                    <p class="scene-step">↓</p>
+                    <p>自动完成重命名和归类</p>
+                </article>
+                <article class="card scene-card">
+                    <h3>文档生成</h3>
+                    <p>告诉 Origo：写一份项目总结</p>
+                    <p class="scene-step">↓</p>
+                    <p>自动输出结构清晰的完整文档</p>
+                </article>
+                <article class="card scene-card">
+                    <h3>PDF 处理</h3>
+                    <p>告诉 Origo：把这些 PDF 合并</p>
+                    <p class="scene-step">↓</p>
+                    <p>一键完成，无需手动操作</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-demo">
+        <div class="container">
+            <h2 class="section-title">AI 工作流演示</h2>
+            <p class="section-sub">可视化看到 Origo 如何一步步完成任务。</p>
+            <div class="workflow-line">
+                <article class="card wf-node">
+                    <div class="wf-icon">🧠</div>
+                    <h3>理解需求</h3>
+                    <p class="muted">读取自然语言并提炼目标</p>
+                </article>
+                <article class="card wf-node">
+                    <div class="wf-icon">✨</div>
+                    <h3>生成方案</h3>
+                    <p class="muted">给出可确认的执行计划</p>
+                </article>
+                <article class="card wf-node">
+                    <div class="wf-icon">⚙️</div>
+                    <h3>自动处理</h3>
+                    <p class="muted">按规则批量执行任务</p>
+                </article>
+                <article class="card wf-node">
+                    <div class="wf-icon">✅</div>
+                    <h3>完成结果</h3>
+                    <p class="muted">输出可直接交付的产物</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+            <h2 class="section-title">为什么选择 Origo</h2>
+            <div class="grid-3">
+                <article class="card feature-card">
+                    <h3>✔ 低学习成本</h3>
+                    <p>不需要掌握复杂菜单和参数，直接说需求。</p>
+                </article>
+                <article class="card feature-card">
+                    <h3>✔ 一体化处理</h3>
+                    <p>从文件到文档再到图表，在同一套工作流中完成。</p>
+                </article>
+                <article class="card feature-card">
+                    <h3>✔ 结果导向</h3>
+                    <p>重点不是聊天记录，而是可直接交付的输出结果。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow">
+        <div class="container">
+            <h2 class="section-title">3 步完成任务</h2>
+            <div class="steps-timeline">
+                <div class="time-step">
+                    <div class="step-dot">1</div>
+                    <h3>拖入文件</h3>
+                    <p class="muted">上传你要处理的数据、文档或图片。</p>
+                </div>
+                <div class="time-step">
+                    <div class="step-dot">2</div>
+                    <h3>告诉 Origo</h3>
+                    <p class="muted">用自然语言描述你要的处理方式。</p>
+                </div>
+                <div class="time-step">
+                    <div class="step-dot">3</div>
+                    <h3>完成</h3>
+                    <p class="muted">确认预览后执行，自动产出最终结果。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>立即体验 Origo，让办公更简单</h2>
+            <a class="btn btn-primary" href="/register">免费开始</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div>Origo · 文件夹到PPT自动化</div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", initLandingDemo);
+    </script>
+</body>
+</html>
