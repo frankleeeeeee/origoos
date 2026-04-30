@@ -345,8 +345,8 @@ function initLandingDemo() {
     async function runRealProgressFromUpload(file, promptText) {
         resetDemoArea();
         const lines = [
-            "正在上传文件到服务端（20%）",
-            "正在解析上传内容（40%）",
+            "开始处理文件任务（20%）",
+            "正在解析文件内容（40%）",
             "正在生成PPT大纲（70%）",
             "正在渲染PPT并返回下载（90%）",
             "生成完成（100%）",
