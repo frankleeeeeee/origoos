@@ -1,6 +1,6 @@
 // 官网演示页：统一直连远程服务端（避免本地 8000 未启动导致生成失败）
 const API_BASE = "https://api.hypermeld.com";
-const CLIENT_DOWNLOAD_URL = "http://download.hypermeld.com/OrigoOS.exe";
+const CLIENT_DOWNLOAD_URL = "http://download.hypermeld.com/OrigoOS_v1.0.0.exe";
 
 function normalizeDownloadUrl(url) {
     const u = String(url || "").trim();
